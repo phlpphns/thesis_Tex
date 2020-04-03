@@ -7,7 +7,7 @@ This temlate requires that several LaTeX-packages are installed.
 
 To visualize pieces of code, _pygmentize_ is required
 
-For compilation, you will need shell escpaes like:
+For compilation, you will need shell escapes like:
 
 pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex
 
