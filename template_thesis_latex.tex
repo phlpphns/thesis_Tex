@@ -1,0 +1,159 @@
+% !TEX encoding = UTF-8 Unicode
+% !TeX spellcheck = en_US
+\documentclass[12pt,twoside,onecolumn]{book} %draft im Entwurfsmodus
+\include{Praeambel/Praeambel}
+\include{Praeambel/Layout}
+\include{Praeambel/BibliographyStyleSettings}
+
+
+
+\include{Abbreviations/definitionLayoutAbbreviations}
+\include{Abbreviations/Abbreviations}
+\glsaddall
+
+
+%\titleformat{\chapter}[display]
+%	{\bfseries\Large}
+%	{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+%	{1ex}
+%	{\titlerule\vspace{1ex}\filleft}
+%	[\vspace{1ex}\titlerule]
+
+
+
+	\begin{document}
+
+%\includepdf[pages=1, rotate=180]frontPage} %%% possible to include front page as *.pdf
+\include{frontPage}%%%%
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\frontmatter
+\pagestyle{thesisINTRO}
+	\addcontentsline{toc}{chapter}{Short description}% in english language}
+	\include*{Abstracts/Abstract_englisch}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	\addcontentsline{toc}{chapter}{Kurzbeschreibung}% in deutscher Sprache}
+	\include*{Abstracts/Abstract_deutsch}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+	\addcontentsline{toc}{chapter}{Table of contents}
+	\renewcommand\contentsname{Table of contents}
+	\tableofcontents
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	
+	\addcontentsline{toc}{chapter}{List of figures}
+	\listoffigures
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+		
+	\addcontentsline{toc}{chapter}{List of tables}
+	\listoftables
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	
+	
+	\renewcommand*{\glsgroupskip}{} %%%	\printglossary[title=Nomenclature]
+	\printnoidxglossary[title=Nomenclature]
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+	
+	\chapter*{Introduction}
+	\addcontentsline{toc}{chapter}{Introduction}
+	\include*{./Introduction}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+\mainmatter
+\pagestyle{thesisMAIN}
+	
+	
+	\newcommand{\pathChapa}{./Chapter01_Introduction/}
+	\newcommand{\pathChapb}{./Chapter02_ExperimentalAspects/}
+	\newcommand{\pathChapc}{./Chapter03_Progress/}
+	\newcommand{\pathChapd}{./Chapter04_FutureDevelopments/}
+	\newcommand{\pathChapApp}{./APPENDIX/}
+	
+	
+	
+	\graphicspath{{\pathChapa}}
+	\chapter{Coarse intro}
+	\include*{./Chapter01_Introduction/Chapter01_shortIntro}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+	\chapter{Technical details}
+	\include*{./Chapter01_Introduction/Chapter01_technicalDetails}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+
+	\graphicspath{{\pathChapb}}
+	\chapter{Experimental Aspects}
+	\include*{./Chapter02_ExperimentalAspects/Chapter02}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+
+	\graphicspath{{\pathChapc},{\pathChapApp}}
+	%\addtocontents{toc}{\protect\newpage}
+	\chapter{Progress}
+	\include*{./Chapter03_Progress/Chapter03}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+
+	\graphicspath{{\pathChapd}}
+	\chapter{Future Developments}
+	\include*{./Chapter04_FutureDevelopments/Chapter04}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+
+\backmatter
+\pagestyle{thesisBACKMATTER}
+	\chapter{Final conclusions and outlook}%\addcontentsline{toc}{chapter}{Final conclusions and outlook}
+	\include*{Conclusions/Conclusions}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	\chapter{Some other thoughts}%	\addcontentsline{toc}{chapter}{Some other thoughts}
+	\include*{Acknowledgement/Acknowledgement}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+%
+%
+
+\renewcommand\pagenumbering[1]{} % we need this to resume the pagenumbering
+\mainmatter % we need this to have the chapter letters
+\appendix
+\pagestyle{thesisAPPENDIX}
+	\newcommand{\pathChapApp}{./APPENDIX/}
+	\graphicspath{{\pathChapApp}}
+		
+	%%%====Change the header of the appendix chapter
+			\makeatletter
+			\def\@makechapterhead#1{%
+				\vspace*{50\p@}%
+				{\parindent \z@ \raggedright \normalfont
+					\interlinepenalty\@M
+					\LARGE \bfseries #1\par\nobreak
+					\vskip 40\p@
+				}}
+			\def\@makeschapterhead#1{%
+				\vspace*{50\p@}%
+				{\parindent \z@ \raggedright
+					\normalfont
+					\interlinepenalty\@M
+					\Large \bfseries  #1\par\nobreak
+					\vskip 40\p@
+				}}
+			\makeatother
+			
+	\chapter{APPENDIX}%\vspace*{-2cm}
+	\include*{APPENDIX/APPENDIX_Scripts}
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%\setcounter{page}{\thepage+1}
+
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	\pagestyle{thesisBIBLIOGRAPHY}
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\printbibliography
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+\end{document}
+
+
