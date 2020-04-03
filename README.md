@@ -14,7 +14,6 @@ pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_late
 
 In any case have a look at the various *latex_compile** files that are provided.
 
-Under Linux, using texlive, everything runs fine. (Acttivate the compile files with chmod +x)
-For windows I do not remember problems as well.
+Under Linux, using texlive, everything runs fine. (Acttivate the compile files with chmod +x) - For windows I do not remember problems as well.
 
 Perhaps it also runs fine on overleaf etc.
