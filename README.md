@@ -3,9 +3,9 @@ This is a template for theses in Latex. For example bachelor, master, PhD....
 
 This template is the result of several years of work of researching at many places and using pieces of information and inputs from the internet which cannot be traced back anymore. In spite of this unless a better license is found for future releases, for the time being this reposiory is published under the GNU GPLv3. You can use it for whatever you want but never claim that is was your or anyone's else (also not my) work.
 
-This temlate requires that several LaTeX-packages are installed. 
+This temlate requires that several LaTeX-packages are installed. Infos will be found in the directory _Praembel_.
 
-To visualize pieces of code, _pygmentize_ is required
+To visualize pieces of code _pygmentize_ is required
 
 For compilation, you will need shell escapes like:
 
