@@ -1,0 +1,67 @@
+\usepackage[nogroupskip,nonumberlist,nopostdot,toc]{glossaries}
+
+\newglossarystyle{mysuper}{%
+	\setglossarystyle{super}% base style on the list style
+	\renewenvironment{theglossary}%
+	{\tablehead{}\tabletail{}%
+		\begin{supertabular}{rp{\glsdescwidth}}}%
+		{\end{supertabular}}%
+}
+\setglossarystyle{mysuper}
+
+\newglossarystyle{mylong}{%
+	\renewenvironment{theglossary}%
+	{\begin{longtable}[l]{rcp{\glsdescwidth}p{\glspagelistwidth}}}%
+		{\end{longtable}}%
+	\renewcommand*{\glossaryheader}{}%
+	\renewcommand*{\glsgroupheading}[1]{}%
+	\renewcommand{\glossentry}[2]{%
+		\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
+		\glossentrysymbol{##1} &
+		\glossentrydesc{##1} &
+		##2\tabularnewline
+	}%
+	\renewcommand{\subglossentry}[3]{%
+		&
+		\glssubentryitem{##2}%
+		\glossentrysymbol{##2} &
+		\glstarget{##2}{\strut}\glossentrydesc{##2} & ##3\tabularnewline
+	}%
+%	\renewcommand*{\glsgroupskip}{%
+%		\ifglsnogroupskip\else & & &\tabularnewline\fi}%
+}
+\setglossarystyle{mylong}
+%\setglossarystyle{mysuper}
+
+%\glssanitizesorttrue
+%
+%\renewcommand{\glsprestandardsort}[3]{%
+%  \glsfieldfetch{#1}{desc}{#0}%
+%  \glsdosanitizesort
+%}
+
+\makenoidxglossaries
+%\makeglossaries
+%\glsaddall
+
+
+%\newglossarystyle{super}{%
+%	\renewenvironment{theglossary}%
+%	{\tablehead{}\tabletail{}%
+%		\begin{supertabular}{lp{\glsdescwidth}}}%
+%		{\end{supertabular}}%
+%	\renewcommand*{\glossaryheader}{}%
+%	\renewcommand*{\glsgroupheading}[1]{}%
+%	\renewcommand{\glossentry}[2]{%
+%		\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
+%		\glossentrydesc{##1}\glspostdescription\space ##2\tabularnewline
+%	}%
+%	\renewcommand{\subglossentry}[3]{%
+%		&
+%		\glssubentryitem{##2}%
+%		\glstarget{##2}{\strut}\glosentrydesc{##2}\glspostdescription\space
+%		##3\tabularnewline
+%	}%
+%	\renewcommand*{\glsgroupskip}{%
+%		\ifglsnogroupskip\else & \tabularnewline\fi}%
+%}
