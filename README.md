@@ -11,4 +11,9 @@ For compilation, you will need shell escapes like:
 
 pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex
 
-Under Linux, using texlive, everthing runs finde. Maybe as well onn overleaf etc. For windows I remember no problems. in any case have a look at the varioius provided *latex_compile** files.
+In any case have a look at the varioius provided *latex_compile** files.
+
+Under Linux, using texlive, everthing runs fine. (Acttivate with chmod +x)
+For windows I do not remember problems as well.
+
+Perhaps it also runs fine on overleaf etc.
