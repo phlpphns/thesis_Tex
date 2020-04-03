@@ -1,0 +1,41 @@
+%\usepackage[square,comma,numbers,sort&compress]{natbib}
+%\bibliographystyle{unsrtdin}
+
+\usepackage{csquotes}
+\usepackage[backend=bibtex,
+%style=authoryear,
+style=authoryear,%-icomp,    % Zitierstil
+%giveinits=true,
+giveninits=true,
+isbn=false,
+doi=true,
+url=false,
+pagetracker=false,          % ebd. bei wiederholten Angaben (false=ausgeschaltet, page=Seite, spread=Doppelseite, true=automatisch)
+sortcites,
+maxbibnames=50,            % maximale Namen, die im Literaturverzeichnis angezeigt werden (ich wollte alle)
+maxcitenames=2,            % maximale Namen, die im Text angezeigt werden, ab 4 wird u.a. nach den ersten Autor angezeigt
+autocite=inline,           % regelt Aussehen für \autocite (inline=\parancite)
+block=none,                % kleiner horizontaler Platz zwischen den Feldern
+backref=false,              % Seiten anzeigen, auf denen die Referenz vorkommt
+backrefstyle=three+,       % fasst Seiten zusammen, z.B. S. 2f, 6ff, 7-10
+date=short,                % Datumsformat
+uniquename=false,
+%refsegment=chapter,
+]{biblatex}
+
+\DeclareNameAlias{author}{last-first}
+\renewcommand*{\multinamedelim}{{\addsemicolon\addspace}}
+
+\addbibresource{literature.bib}
+\defbibheading{secbib}[\bibname]{%
+  \section*{#1}%
+  \markboth{#1}{#1}}
+
+
+%\setcounter{secnumdepth}{4}
+%\onehalfspacing
+%\setcounter{tocdepth}{8}
+%\usepackage[sorting=none, firstinits, style=numeric-comp, backend=biber]{biblatex}
+%\DeclareNameAlias{sortname}{last-first}
+%\DeclareNameAlias{author}{sortname}
+%\DeclareFieldFormat{number}{no. #1}

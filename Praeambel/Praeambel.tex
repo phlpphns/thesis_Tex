@@ -1,0 +1,177 @@
+% !TEX encoding =UTF-8 Unicode
+% !TeX spellcheck = en_US
+%\RequirePackage[l2tabu, orthodox]{nag}
+
+%	\documentclass[12pt,twoside,onecolumn]{book} %draft im Entwurfsmodus
+	%\documentclass[12pt,twoside,onecolumn,a4paper,draft]{book} %draft im Entwurfsmodus
+	\usepackage[a4paper]{geometry}
+%	\frenchspacing 				%Keine längeren Abstände nach Punkten.			
+	\raggedbottom
+%	\flushbottom		%------ Das streckt den Text und füllt die Seiten. Na ja!
+
+
+%------ Sprachoptionen und Schriftoptionen
+  % --- Latex	
+	\usepackage[british]{babel}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{kurier}
+%	\usepackage{quattrocento}
+%	\usepackage{avant}			%renew
+%	\usepackage{bookman}
+%	\usepackage{tgadventor}		%renew
+%	\usepackage{emerald}
+%	\renewcommand*\familydefault{\sfdefault}			%standard serifenlos
+%	\renewcommand*\familydefault{\ttdefault}			%standard typewriter
+	
+	\usepackage{upgreek}
+	\usepackage{units}	
+	\usepackage{textcomp}
+	\usepackage{microtype}
+	\usepackage{url}
+	
+	\usepackage[hidelinks]{hyperref}
+	
+	\usepackage{setspace}
+	\onehalfspacing
+	
+	\usepackage{tcolorbox}
+	\usepackage[export]{adjustbox}
+	
+	%------ Mathematik
+	\usepackage{amsmath,amssymb,amsthm,amstext,amsfonts,mathrsfs}
+%		\numberwithin{equation}{chapter}
+	
+	\usepackage{nccmath}		%Für linksbündige Formeln
+	\usepackage{esvect}			%Vektorenpfeile
+	%\usepackage{titlesec}
+	
+	%------ Für Tabellen
+%	\usepackage[table]{xcolor}
+	\usepackage{tabularx}
+	\usepackage{array}
+	\usepackage{multirow}
+	\usepackage{booktabs}
+	\usepackage{multicol}
+	\usepackage{lscape}
+	\usepackage{rotating}
+	
+	
+	%------ Für Graphiken
+	\usepackage{graphicx}		% Paket zur Verwendung von .jpg Bildern
+	%\usepackage{subfig}
+	\usepackage{subcaption}
+	\usepackage{caption}[2013/02/03]	% Beschriftungen der Graphiken in Minipage zentriert
+	\captionsetup{margin=10pt,font={small,bf},labelfont=bf,justification=centering}
+	\usepackage[section]{placeins}	%Bilder bleiben im jeweiligen Abschnitt
+	\usepackage{wrapfig}			%Textumflossene Graphik
+	%	\usepackage{picins}
+	%	\usepackage{sidecap}			%Seitliche Beschriftungen - gibt besseres denke ich
+	
+	%------ Für Zahl der Ebenen im Inhaltsverzeichnis
+	\setcounter{secnumdepth}{2}
+	\setcounter{tocdepth}{4}
+	
+	%------ Beeinflusst Nummerierungen der Elemente
+%	\usepackage{chngcntr}
+%	\counterwithout{footnote}{chapter}
+%	\counterwithout{figure}{chapter}
+%	\counterwithout{table}{chapter}
+%	\counterwithout{equation}{chapter}
+	
+%	\renewcommand\theequation{\thechapter.\arabic{equation}
+
+	%------ Hurenkinder und Schusterjungen verhindern
+	\clubpenalty =03000
+	\widowpenalty=30000
+	%\displaywidowpenalty=3000
+	
+	%------ zB Tiefgestellung
+%	\usepackage{fixltx2e} %Koma braucht es nicht
+	
+	\usepackage{pdfpages}
+	
+	
+	\usepackage{comment}
+	
+	\usepackage{longtable}
+	\usepackage{newclude}
+	%\usepackage{epstopdf}
+	\usepackage{textgreek}
+	
+	%\usepackage{pythontex}
+	%\usepackage{fvextra}
+	
+	\usepackage{etoolbox}
+	\usepackage{flafter}
+	%\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+	%\AppendGraphicsExtensions{.tif}
+	
+	
+	\usepackage{epigraph}
+	\epigraphfontsize{\small\itshape}
+	\setlength\epigraphwidth{12cm}
+	\setlength\epigraphrule{0pt}
+	
+	\usepackage{minted}
+	%\newmintinline[inline]{text}{fontsize=\normalsize}
+	
+	%\usepackage{listings}
+	\usepackage{color}
+	
+	\usepackage[version=4]{mhchem}
+	
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+	
+	%\lstset{frame=tb,
+	%  language=Python,
+	%  aboveskip=3mm,
+	%  belowskip=3mm,
+	%  showstringspaces=false,
+	%  columns=flexible,
+	%  basicstyle={\small\ttfamily},
+	%  numbers=none,
+	%  numberstyle=\tiny\color{gray},
+	%  keywordstyle=\color{blue},
+	%  commentstyle=\color{dkgreen},
+	%  stringstyle=\color{mauve},
+	%  breaklines=true,
+	%  breakatwhitespace=true,
+	%  tabsize=3,
+	%  escapeinside=\#
+	%}
+	
+	
+	
+	%\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+	%
+	%\makeatletter
+	%\patchcmd{\l@chapter}% <cmd>
+	%{1.5em}% <search>
+	%{5cm}% <replace>
+	%{}{}% <success><failure>
+	%\makeatother
+	%
+	%\makeatletter
+	%\patchcmd{\@makechapterhead}% <cmd>
+	%{\space}% <search>
+	%{\hspace*{3cm}\ignorespaces}% <replace>
+	%{}{}% <success><failure>
+	%\makeatother
+	
+	
+	
+	\hyphenation{char-ac-ter-i-sa-tion}
+	
+	
+	%------ selbstdefinierte Symbole
+	\newcommand{\standb}			%------ Zeichen für Standardbedingungen
+	{{\unitlength1ex\linethickness{0.1ex}%
+			\begin{picture}(2,2)%
+			\put(1,1){\circle{1}}%
+			\put(0.25,1){\line(1,0){1.5}}%
+			\end{picture}}}
+	
+
