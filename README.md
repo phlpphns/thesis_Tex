@@ -5,6 +5,10 @@ This template is the result of several years of work of researching at many plac
 
 This temlate requires that several LaTeX-packages are installed. 
 
-to visualize code, pygmentize is required
+To visualize pieces of code, _pygmentize_ is required
 
-Under Linux, using texlive, everthing runs finde. Maybe as well onn overleaf etc. For windows I remember no problems. in any case have a look at the *latex_compile** files.
+For compilation, you will need shell escpaes like:
+
+pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex
+
+Under Linux, using texlive, everthing runs finde. Maybe as well onn overleaf etc. For windows I remember no problems. in any case have a look at the varioius provided *latex_compile** files.
