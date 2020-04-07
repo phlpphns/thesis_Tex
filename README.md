@@ -7,15 +7,17 @@ This template is the result of several years of work of researching at many plac
 
 ## prerequisites
 
-This temlate requires that several LaTeX-packages are installed. Infos will be found in the directory _Preambel_. Using MikTex on Windows allows to install needed packages on the fly. TexLive (Linux) is easy as well, install them via apt. There is a MikTex for several Linux distros as wel.
+This template requires that several LaTeX-packages are installed. Infos will be found in the directory _Preambel_.
 
-To visualize pieces of code _pygmentize_ is required. Often it is already available, Windows didn't give errors).
+Tip: Using MikTex on Windows allows to install needed packages on the fly. TexLive (Linux) is easy as well, install them e.g. via apt. There seems to be a MikTex for several Linux distros as well.
+
+To visualize pieces of code, _pygmentize_ is required. MikTex on a relatively plain Windows system didn't give errors. Linux worked well.
 
 ## usage
 
 ---> For compilation, you will need shell escapes like:
 
-*pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex*
+> *pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex*
 
 If you are using TexStudio press ALT+T and then T to open the console (terminal). Use one of the the various *latex_compile\** files that are provided.
 
