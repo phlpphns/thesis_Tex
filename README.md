@@ -17,7 +17,7 @@ To visualize pieces of code _pygmentize_ is required. Often it is already availa
 
 *pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex*
 
-If you are using TexStudio press ALT+T and then T to open the console. Use one of the the various *latex_compile** files that are provided.
+If you are using TexStudio press ALT+T and then T to open the console (terminal). Use one of the the various *latex_compile\** files that are provided.
 
 Under Linux, acttivate the compile files with chmod +x.
 
