@@ -19,7 +19,7 @@ To visualize pieces of code, _pygmentize_ is required. MikTex on a relatively pl
 
 > *pdflatex -synctex=1 -interaction=nonstopmode --shell-escape template_thesis_latex*
 
-If you are using TexStudio press ALT+T and then T to open the console (terminal). Use one of the the various *latex_compile\** files that are provided.
+If you are using TexStudio press ALT+T and then T to open the console (terminal). Use one of the the various *latex_compile\** files that are provided. If you rename the *.tex file, you must change the name as well in the commands in those *latex_compile\** files.
 
 Under Linux, acttivate the compile files with *chmod +x*.
 
